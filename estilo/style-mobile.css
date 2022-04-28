@@ -1,0 +1,143 @@
+/*** Font títulos ***/
+@import url('https://fonts.googleapis.com/css2? family= Playfair+Display & display=swap');
+
+/*** Font padrão ***/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+/* @Media 
+------------------ */
+@media screen and (min-width: 375px) and (max-width: 978px) {
+
+/* Reseta estilização padrão
+------------------------------ */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Nova estilização padrão
+-------------------------------- */
+body {
+    background: var(--light-grayblue);
+    font-family: 'Quicksand', Times, sans-serif;
+    font-size: 13px;
+}
+
+/* Root para difinição de cores
+-------------------------------- */
+:root {
+    --violet: hsl(263, 55%, 52%);
+    --dark-gray: hsl(217, 19%, 35%);
+    --dark-blue: hsl(219, 29%, 14%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayblue: hsl(210, 46%, 95%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* ---------- Estilização da página ----------- */
+main#container {
+    width: 375px;
+    margin: 0 auto;
+    display: grid;
+    row-gap: 30px;
+}
+
+main#container>section.conteudo {
+    border-radius: 10px;
+    padding: 35px;
+}
+
+section.conteudo>div.body>h1 {
+    margin: 15px 0px 20px 0px;
+    font-weight: 600;    
+    font-family: 'Playfair Display', times, serif;
+}
+
+section.conteudo>div.body>h1+p {
+    font-weight: 500;
+}
+
+main#container>section.conteudo>img, 
+main#container>section.conteudo>header {
+    display: inline-block;
+}
+
+main#container>section.conteudo>img {
+    border-radius: 100%;
+    width: 40px;
+}
+
+main#container>section.conteudo>header {
+    line-height: 15px;    
+    font-size: 1.3em;
+    position: relative;
+    top: -5px;
+    left: 15px;
+}
+
+
+/*** Estilização individual de cada seção ***/
+/* Seção 1 */
+section#section-1>img {
+    border: 3px solid hsla(210, 46%, 95%, 50%);
+}
+
+main#container section#section-1 {
+    background: var(--violet) url('../images/bg-pattern-quotation.svg') 90% 5% no-repeat;
+    color: var(--light-grayblue);
+}
+
+section#section-1>header>h5 {
+    color: var(--light-grayblue);
+}
+
+section#section-1>header>h6 {
+    color: hsla(210, 46%, 95%, 50%);
+}
+
+section#section-1>div.body>h1+p {
+    color: hsla(210, 46%, 95%, 0.7);
+}
+
+/* Seção 3 e 5 */
+main#container section#section-3, 
+main#container section#section-5,
+section#section-3>header>h5,
+section#section-5>header>h5 {
+    background: var(--white);
+    color: var(--dark-gray);
+}
+
+section#section-3>header>h6,
+section#section-5>header>h6 {
+    color: hsla(217, 19%, 35%, 0.5);
+}
+
+section#section-3>div.body>h1+p, 
+section#section-5>div.body>h1+p {
+    color: hsla(217, 19%, 35%, 0.7);
+}
+
+/* Seção 2 e 4 */
+section#section-4>img {
+    border: 3px solid var(--violet);
+}
+main#container>section#section-2, 
+main#container>section#section-4,
+section#section-2>header>h5,
+section#section-4>header>h5 {
+    background: var(--dark-gray);
+    color: var(--light-grayblue);
+}
+section#section-2>header>h6, 
+section#section-4>header>h6 {
+    color: hsla(210, 46%, 95%, 0.5);
+}
+
+section#section-2>div.body>h1+p, 
+section#section-4>div.body>h1+p {
+    color: hsla(210, 46%, 95%, 0.7);
+}
+
+}
